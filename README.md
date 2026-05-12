@@ -32,3 +32,6 @@ def isUnique(text):
 NOTES:
 - HINT O( N.LOG(N) ) time complexity may be referring to sorting
 - consider edge cases like in the solution # 2 of this problem, it has 3 edge cases (which i handled gracefully in my code 💅); empty string, singleton string, and in my implemmentation it was necessary not to run loop for the last character/index (see the code # 2 and you will know why, its OBVIOUS ma tery hi jaal ma phansa ahhh)
+- hint # 2 referred to a solution using "bit vector", i don't have knowledge on this topic, tried youtube, built basic understanding of a bit vector, but didn't think how to use it for this problem (due to time constraint, 45 mins se zyada nhi spend krunga until finals/exams to maintain consistency cuz DISCIPLINE >> MOTIVATION ahhh words)
+
+for day 2 : learn and implement solution of problem 1.1 using hint # 2. if time allows do next problem as well (1.2)
