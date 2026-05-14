@@ -20,7 +20,7 @@ def isUnique(text):
 
 My Solution/Code #2:
 def isUnique(text):
-    # doesn't use additional data structure
+    # doesn't use additional data structure    !!! THIS WAS A MISTAKE - read line #47-48!!!
     if len(text) == 0 or len(text) == 1:
         return True
     text = sorted(text)
@@ -35,3 +35,19 @@ NOTES:
 - hint # 2 referred to a solution using "bit vector", i don't have knowledge on this topic, tried youtube, built basic understanding of a bit vector, but didn't think how to use it for this problem (due to time constraint, 45 mins se zyada nhi spend krunga until finals/exams to maintain consistency cuz DISCIPLINE >> MOTIVATION ahhh words)
 
 for day 2 : learn and implement solution of problem 1.1 using hint # 2. if time allows do next problem as well (1.2)
+
+
+DAY 2 - 13th May 2026 (~ 50 mins)
+
+NOTES:
+- Performed analysis for time complexity and space complexity of solution #1 and solution #2. For #1 TC = O(N) and SC = O(N).
+- At first i thought it should be O(1) for both cuz characters are limited (alphabets -> 26 characters, ascii -> 128 or 256 characters (7-bit or 8-bit encoding), unicode characters also limited) so it should be considered constant right? And since the code runs for maximum characters in the worst case its also constant? but NAHHH, for interviews you can't assume the characters are limited, just assume that its arbitrarily infinite like the input string.
+- N <= C (N is the input string and C is the character set size means kitny characters maximum hain) and for this problem N <= C bcz at (C+1)th character u encounter a duplicate value, where loop breaks.
+- therefore the big-O notation truly is O(min(N,C)) which boils down to O(N). i understand this part how O(min(N,C)) is O(N) for simplicity, but don't ask me pls 🙂.
+- text = sorted(text) THIS IS USING AN ADDITIONAL DATA STRUCTURE!!!
+- sorted() uses a list data structure (timsort, the python algorithm for sorting does this) so when u use sorted() its using an additional data structure
+- For #2 TC = O(N.LOG(N)) and SC = O(N). sorting takes O(N.LOG(N)) time. SC has same logic as solution # 1
+- also saw how boolean arrrays can be used to solve this problem but that also takes O(N) for TC and SC so didn't bother to implement it.
+
+i guess that's all, couldn't get the time to see bit vector thing.
+for day 3, do the problem 1.2 (will see the bit vector thing after exams/finals)
