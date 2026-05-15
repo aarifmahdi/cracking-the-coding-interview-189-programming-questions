@@ -53,7 +53,7 @@ i guess that's all, couldn't get the time to see bit vector thing.
 for day 3, do the problem 1.2 (will see the bit vector thing after exams/finals)
 
 
-DAY 3 - 14TH MAY 2026
+DAY 3 - 14TH MAY 2026 (~ 50mins)
 
 1.2 Check Permutation: Given two strings, write a method to decide if one is a permutation of the
 other.
