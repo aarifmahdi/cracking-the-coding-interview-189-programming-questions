@@ -51,3 +51,51 @@ NOTES:
 
 i guess that's all, couldn't get the time to see bit vector thing.
 for day 3, do the problem 1.2 (will see the bit vector thing after exams/finals)
+
+
+DAY 3 - 14TH MAY 2026
+
+1.2 Check Permutation: Given two strings, write a method to decide if one is a permutation of the
+other.
+
+My Solution #1:
+def checkPermutation(text1, text2):
+    # TC: O(N.log(N))
+    # SC: O(N)
+    text1 = sorted(text1)
+    text2 = sorted(text2)
+    if text1 == text2:
+        print("They're permutations!")
+    else:
+        print("They're not permutations!")
+
+My Solution #2
+def checkPermutation(text1, text2):
+    # TC: O(N)
+    # SC: O(N)
+    if len(text1) != len(text2):
+        print("They're not permutations!")
+        return
+    freq = {}
+    for i in range(len(text1)):
+        if text1[i] in freq:
+            freq[text1[i]] += 1
+        else:
+            freq[text1[i]] = 1
+        if text2[i] in freq:
+            freq[text2[i]] -= 1
+        else:
+            freq[text2[i]] = -1
+    for key in freq:
+        if freq[key] != 0:
+            print("They're not permutations!")
+            return
+    print("They're permutations!")
+
+NOTES:
+- Ask for the definition of terms used in question/problem statement. for eg: i couldn't recall what permutation meant, so i searched it up.
+- permutation: two strings have exact same characters arranged in different order (so they must have same length); eg: "abc" "cba"
+- The BEST and most OPTIMIZED solution for this problem is My Solution #2
+- But it can also be a solution with SC: O(1) i.e. constant space complexity, when it is given that the character set is limited (eg: ASCII only). A fixed-size array can be used to achieve O(1) SC in this specific case.
+
+ig this is all of today's learnings, for day 4, solve problem 1.3
