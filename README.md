@@ -1,7 +1,7 @@
 # documenting my journey of cracking-the-coding-interview through 189-programming-questions
 i'll upload/do/read/solve code/implementation/understanding/learnings from cracking-the-coding-interview-189-programming-questions-and-solutions book by Gayle Laakmann McDowell in this repo. which includes data structures, algorih, problem-solvih. ig yeah that's all :)
 
-DAY 1 - 12th May 2026 (~ 45 mins)
+DAY 1 - 13th May 2026 (~ 45 mins)
 
 Interview Question 1.1
 1.1 Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you
@@ -37,7 +37,7 @@ NOTES:
 for day 2 : learn and implement solution of problem 1.1 using hint # 2. if time allows do next problem as well (1.2)
 
 
-DAY 2 - 13th May 2026 (~ 50 mins)
+DAY 2 - 14th May 2026 (~ 50 mins)
 
 NOTES:
 - Performed analysis for time complexity and space complexity of solution #1 and solution #2. For #1 TC = O(N) and SC = O(N).
@@ -53,7 +53,7 @@ i guess that's all, couldn't get the time to see bit vector thing.
 for day 3, do the problem 1.2 (will see the bit vector thing after exams/finals)
 
 
-DAY 3 - 14TH MAY 2026 (~ 50mins)
+DAY 3 - 15TH MAY 2026 (~ 50mins)
 
 1.2 Check Permutation: Given two strings, write a method to decide if one is a permutation of the
 other.
@@ -101,7 +101,7 @@ NOTES:
 ig this is all of today's learnings, for day 4, solve problem 1.3
 
 
-DAY 4 - 15th MAY 2026 (~ 10mins)
+DAY 4 - 16th MAY 2026 (~ 10mins)
 
 1.3 URLify: Write a method to replace all spaces in a string with '%20'. You may assume that the string
 has sufficient space at the end to hold the additional characters, and that you are given the "true"
