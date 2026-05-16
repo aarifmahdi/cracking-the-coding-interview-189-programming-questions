@@ -99,3 +99,29 @@ NOTES:
 - But it can also be a solution with SC: O(1) i.e. constant space complexity, when it is given that the character set is limited (eg: ASCII only). A fixed-size array can be used to achieve O(1) SC in this specific case.
 
 ig this is all of today's learnings, for day 4, solve problem 1.3
+
+
+DAY 4 - 15th MAY 2026
+
+1.3 URLify: Write a method to replace all spaces in a string with '%20'. You may assume that the string
+has sufficient space at the end to hold the additional characters, and that you are given the "true"
+length of the string. (Note: If implementing in Java, please use a character array so that you can
+perform this operation in place.)
+EXAMPLE
+Input: "Mr 3ohn S m i t h 13
+Output: "Mr%203ohn%20Smith"
+
+My Solution #1:
+def URLify(text):
+    arr = []
+    for char in text:
+        if char == " ":
+            arr.append("")
+        else:
+            arr.append(char)
+    return "".join(arr)
+
+*it took only 5-6 mins to solve this
+*i only wrote the code (cuz cousin aya ha toh just wanted to mark the day atleast), didn't work on TC,SC analysis, nor looked for optimized solutions
+
+for day5, analyze this for TC,SC and see optimized solutions (see TC,SC of list's append() and string's join() method)
