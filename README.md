@@ -116,7 +116,7 @@ def URLify(text):
     arr = []
     for char in text:
         if char == " ":
-            arr.append("")
+            arr.append("%20")
         else:
             arr.append(char)
     return "".join(arr)
@@ -125,3 +125,55 @@ def URLify(text):
 *i only wrote the code (cuz cousin aya ha toh just wanted to mark the day atleast), didn't work on TC,SC analysis, nor looked for optimized solutions
 
 for day5, analyze this for TC,SC and see optimized solutions (see TC,SC of list's append() and string's join() method)
+
+
+DAY 5 - 17th MAY 2026 (~ 40mins)
+
+Python's string's join() method -> str.join()
+
+- The time complexity of Python's str.join() method is O(n), where (n) is the total length of the resulting string.
+- Specifically, if you are joining (k) strings with a total character count of L and a separator of length s, the complexity is O(L + k*s) ; actually (k-1) * s cuz join doesn't add the separator on last string
+- vs concatenation: 
+string += new_str (in a loop), it's O(n^2) i.e. Quadratic cuz repeatedly loop ma concatenate krta krta
+
+*join() is highly optimized:
+- Two-Pass Process: Python first iterates through the iterable to calculate the total required length of the final string (like this -> list ma loop chalaya, elements saaray string hain, loop ki har iteration ma it gets the length of string (i.e. element of list), and sums up on every iteration to get total required length/size for resulting string. this is my thinking ky aesa hota hoga)
+- Single Allocation: It allocates memory for the entire resulting string once.
+- Memory Copying: It then performs a second pass to copy each substring directly into the pre-allocated memory block.
+
+SC:  Because the size of the allocated memory grows proportionally with the total length of the input strings and the separator, the space complexity remains O(n)
+
+so in conclusion,
+- str.join() TC & SC: O(N)
+& concatenation in loop is O(N^2) (SC: O(N))
+
+Python's list's append method -> list.append()
+
+- The time complexity of appending an item to a list in Python is O(1) amortized.
+- While most appends are instantaneous, Python must occasionally resize the list's underlying memory, which takes O(n) time. However, because this happens infrequently, the average time per operation remains constant.
+- Amortized (Average) O(1) Most calls
+- Worst Case (Resizing, explained below 👇) O(n) When list is full
+
+SC: O(1) (Adds one element)
+
+👇RESIZING of Python's list -> O(N)
+
+Formula: It generally grows by roughly 12.5% (1/8th) plus a small constant for larger lists
+Small List Growth: For a new list, the capacity jumps in steps like: 0, 4, 8, 16, 24, 32, 40, 52, 64, 76....
+
+HOW RESIZING WORKS?
+- Python lists are implemented as dynamic arrays
+- Over-allocation: To keep appends fast, Python allocates more space than currently needed.
+- Constant Time: If there is free space at the end of the array, append() simply places the object there.
+- Resizing: When the allocated space is full, Python creates a new, larger array and copies all existing elements to it (this copying of all elements into new array takes O(N) time, which is understandable)
+
+for interviews take append() as O(1)
+👆!!! DO CONFIRM THIS !!!
+
+did the analysis of my solution #1 for problem 1.3:
+- TC: O(N)
+- SC: O(N)
+
+
+for day6, see the optimized solution(s) for this problem 1.3 (remaining 6 problems 1.4-1.9 of Chapter1 Arrays & Strings, WILL DO THESE LATER, after doing Chapter 2,3)
+if time allows, do 2.1 (linked lists chapter)
