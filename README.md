@@ -177,3 +177,37 @@ did the analysis of my solution #1 for problem 1.3:
 
 for day6, see the optimized solution(s) for this problem 1.3 (remaining 6 problems 1.4-1.9 of Chapter1 Arrays & Strings, WILL DO THESE LATER, after doing Chapter 2,3)
 if time allows, do 2.1 (linked lists chapter)
+
+
+DAY 6 - 18th MAY 2026 (~ 55mins)
+
+*understood hint #53 (given by the author) and implemented the solution based on it.
+*actually the question said, You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the "true" length of the string.
+- true length: size of string containing characters (excluding the extra spaces at the end)
+- sufficient space: extra spaces included at the end of string (string means array of characters truly, as in C++)
+question also said, Note: If implementing in Java, please use a character array so that you can perform this operation in place (so i simulated/mimicked the same concept in Python
+ 
+👇for problem 1.3
+My Solution #2
+def URLify(char_array, true_length):
+    # implements hint #53
+    num_space = 0
+    for i in range(true_length):
+        if char_array[i] == " ":
+            num_space += 1
+    write_index = (true_length + (num_space * 2)) - 1
+    for i in range(true_length - 1, -1, -1):
+        if char_array[i] == " ":
+            char_array[write_index] = '0'
+            char_array[write_index - 1] = '2'
+            char_array[write_index - 2] = '%'
+            write_index -= 3
+        else:
+            char_array[write_index] = char_array[i]
+            write_index -= 1
+    return
+
+slicing in Python TC and SC: O(N)
+because it has to traverse the string to copy the characters + it creates a new list in-memory for this purpose.
+
+for day7, see hint #0118 solution, is that more optimized than hint #53?
