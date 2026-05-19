@@ -212,7 +212,7 @@ because it has to traverse the string to copy the characters + it creates a new 
 
 for day7, see hint #0118 solution, is that more optimized than hint #53?
 
-DAY 7 - 19th May 2026 (~ mins)
+DAY 7 - 19th May 2026 (~ 35mins)
 
 - hint #0118 refers to calculating the number of spaces in input string (which we already did in solution #2 so its already utilized)
 
