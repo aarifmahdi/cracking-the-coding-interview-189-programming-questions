@@ -211,3 +211,17 @@ slicing in Python TC and SC: O(N)
 because it has to traverse the string to copy the characters + it creates a new list in-memory for this purpose.
 
 for day7, see hint #0118 solution, is that more optimized than hint #53?
+
+DAY 7 - 19th May 2026 (~ mins)
+
+- hint #0118 refers to calculating the number of spaces in input string (which we already did in solution #2 so its already utilized)
+
+{
+AS PLANNED, remaining 6 problems 1.4-1.9 of Chapter1 Arrays & Strings, WILL DO THESE LATER, after doing Chapter 2,3
+}
+
+2.1 Remove Dups: Write code to remove duplicates from an unsorted linked list.
+FOLLOW UP
+How would you solve this problem if a temporary buffer is not allowed?
+
+wrote first draft/solution of 2.1 but it has bugs/issues (see Google's AI mode chat tmrw to learn n do it properly for interviews)
