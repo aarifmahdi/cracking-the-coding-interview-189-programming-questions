@@ -225,3 +225,31 @@ FOLLOW UP
 How would you solve this problem if a temporary buffer is not allowed?
 
 wrote first draft/solution of 2.1 but it has bugs/issues (see Google's AI mode chat tmrw to learn n do it properly for interviews)
+
+
+20th, 21st, 22nd MAY -> Recharge ⛽
+
+
+DAY 8 - 23rd May 2026 (~ 1hr)
+
+My Solution #1 (for problem 2.1)
+def remove_duplicates(head: ListNode) -> ListNode:
+    if not head:
+        return head
+    uniques = {head.val}
+    current = head
+    while current.next:
+        if current.next.val in uniques:
+            current.next = current.next.next
+        else:
+            uniques.add(current.next.val)
+            current = current.next
+    return head
+
+TC: O(N)
+SC: O(N)
+
+- Time Complexity of add method of set() in Python: set.add() is O(1) on average
+  but it's O(n) in the worst-case due to things called "hash collisions" and "table resizing."
+
+for day9, learn/study "hash collisions" concept, if time allows, solve 2.1 for the follow-up Qs.
