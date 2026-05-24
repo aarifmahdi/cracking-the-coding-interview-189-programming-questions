@@ -253,3 +253,61 @@ SC: O(N)
   but it's O(n) in the worst-case due to things called "hash collisions" and "table resizing."
 
 for day9, learn/study "hash collisions" concept, if time allows, solve 2.1 for the follow-up Qs.
+
+
+DAY 9 - 24th May 2026 (~ 1hr15mins)
+
+learnt "hashing" and "collision in hashing and their solution i.e. collision resolution techniques"
+
+- hashing for searching is to get O(1) search time
+e.g:
+u have 5 integers: 1,3,7,13,5
+u store them using hashing, that is:
+- pass the integer to a hash function (e.g: h(x) = x % table_size)
+- the value, hash function h(x) returns, u consider it the "index"
+- store the integer at that index in your table (which is array basically)
+
+simple, right?
+NAHHH
+u see, the hash function may return same value for different integers/strings (any immutable data type, cuz only they're hashable)
+e.g:
+u have these integers: 3,13
+let's say the hash function is, h(x) = integer % table_size
+and for simplicity, table_size = 10
+then,
+    h(3) = 3 % 10 = 3
+    h(13) = 13 % 10 = 3
+both gives same value i.e. same index?
+COLLISION!!!
+this is collision, means different integers going in the same place in hash table
+what's the solution??
+solution is collsion resolution techniques: chaining, linear probing, quadratic probing
+
+Chaining: u store the integers (or any hashable data) in the hash table as a linked list (in a linked list i mean)
+e.g:
+u have integers 1,3,4,7,12,14
+assuming the hash function is same as before ( h(x) = data % table_size )
+then,
+    1,3,4,7,12 are stored in linked_lists at indexes 1,3,4,7,12 in hash the table
+    for 14, hash function h(x) generates same index as 4 (this is collision, and soltuion is chaining)
+    so at index 4, u store 14 in the linked list right after 4.
+what about searching?
+when searching for the keys, you use the same hash function, gets the index and now you search for the key in the linked list at that index, simple.
+
+Linear probing: instead of linked list at the index, you store the integers (or any hashable data) at the index in hash table
+but what to do when collision happens?
+when collision happens, u simply look for an empty space after that index (that hash function generated)
+e.g:
+h(x) = data % table_size
+h'(x) = ( h(x) + f(i) ) % table_size
+where;
+    i = 0,1,2,3,...
+so u simply jump to the next index to store the data when collision occurs, and u continue looking for empty space linearly, until u find one.
+
+quadartic probing: same as linear probing, the change is, you use quadratic jumping instead of linear jumping to find empty space.
+see;
+    h'(x) = ( h(x) + f(i)^2 ) % table_size
+where;
+    i = 0,1,2,3,...
+
+refer to medium 👉 ____ (here, i've explained the same concept on paper with examples and illustrations)
