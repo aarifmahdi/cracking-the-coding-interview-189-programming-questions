@@ -314,7 +314,7 @@ refer to medium 👉 ____ (here, i've explained the same concept on paper with e
 not posted yet, will update it here, soon...
 
 
-DAY 10 - 25th MAY 2026 (~ mins)
+DAY 10 - 25th MAY 2026 (~ 40mins)
 
 solved 2.1 for follow-up Qs
 
