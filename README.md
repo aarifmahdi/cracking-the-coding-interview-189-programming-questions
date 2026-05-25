@@ -311,3 +311,37 @@ where;
     i = 0,1,2,3,...
 
 refer to medium 👉 ____ (here, i've explained the same concept on paper with examples and illustrations)
+not posted yet, will update it here, soon...
+
+
+DAY 10 - 25th MAY 2026 (~ mins)
+
+solved 2.1 for follow-up Qs
+
+My Solution #2 (follow-up)
+# follow up Qs: How would you solve this problem if a temporary buffer is not allowed?
+def removeDuplicates(head: Node) -> Node:
+    if not head:
+        return head
+    current = head
+    while current.next:
+        foo = current
+        while foo.next:
+            if foo.next.val == current.val:
+                foo.next = foo.next.next
+            else:
+                foo = foo.next
+        current = current.next
+    return head
+
+T:O(N^2)
+S:O(1)
+
+btw for this problem 2.1, i implemented a node class (or assume that its given by interviewer;
+class Node:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+(for solution #1, replace Node with ListNode, just different names, same class)
+
+for day11, solve problem 2.2
