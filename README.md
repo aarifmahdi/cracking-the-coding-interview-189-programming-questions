@@ -345,3 +345,28 @@ class Node:
 (for solution #1, replace Node with ListNode, just different names, same class)
 
 for day11, solve problem 2.2
+
+
+DAY 11 - 26th MAY 2026 (~ 35mins)
+
+2.2 Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list
+
+My Solution #1
+def return_kth_to_last(head: ListNode, k: int) -> ListNode:
+    last_index = -1
+    current = head
+    while current:
+        last_index += 1 
+        current = current.next
+    kth = last_index - k
+    i = 0
+    current = head
+    while i < kth:
+        i += 1
+        current = current.next
+    return current
+
+T: O(N)
+S: O(1)
+
+for day12, try hint 41,67,126 (for better/most optimized solution for this problem)
