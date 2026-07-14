@@ -1,4 +1,9 @@
 # documenting my journey of cracking-the-coding-interview through 189-programming-questions
+
+(code files are saved in my local system
+the code/solutions are uploaded in this README along with notes/learnings
+later, i may organize this repo by uploading the code files as they deserve it🙏)
+
 i'll upload/do/read/solve code/implementation/understanding/learnings from cracking-the-coding-interview-189-programming-questions-and-solutions book by Gayle Laakmann McDowell in this repo. which includes data structures, algorih, problem-solvih. ig yeah that's all :)
 
 DAY 1 - 13th May 2026 (~ 45 mins)
