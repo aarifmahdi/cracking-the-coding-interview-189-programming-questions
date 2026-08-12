@@ -25,7 +25,6 @@ def isUnique(text):
 
 My Solution/Code #2:
 def isUnique(text):
-    # doesn't use additional data structure    !!! THIS WAS A MISTAKE - read line #47-48!!!
     if len(text) == 0 or len(text) == 1:
         return True
     text = sorted(text)
